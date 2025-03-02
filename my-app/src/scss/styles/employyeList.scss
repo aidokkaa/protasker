@@ -1,0 +1,211 @@
+.eListContainer {
+    display: flex;
+    background-color: #f4f7fb;
+    padding: 20px;
+    min-height: 100vh;
+  
+    .eListNav {
+        width: 250px;
+        background-color: #0288d1;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        margin-right: 20px;
+      
+        img {
+          width: 150px;
+          height: 150px;
+          border-radius: 50%;
+          object-fit: cover;
+          margin-bottom: 20px;
+          transition: transform 0.3s ease; 
+          
+          &:hover {
+            transform: scale(1.1); 
+          }
+        }
+      
+        .assignT {
+          background-color: #fff;
+          padding: 6px 14px; 
+          border-radius: 20px;
+          font-weight: 600;
+          color: #0288d1;
+          font-size: 14px;
+          cursor: pointer;
+          margin-top: 10px;
+          transition: transform 0.3s ease, background-color 0.3s ease;
+      
+          &:hover {
+            background-color: #e4f4f9;
+            transform: scale(1.05);
+          }
+        }
+      
+        .menunav {
+          display: flex;
+          flex-direction: column;
+          gap: 15px;
+          margin-top: 20px;
+      
+          a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: 600;
+            transition: color 0.3s ease;
+      
+            &:hover {
+              color: #e4f4f9;
+            }
+          }
+        }
+      }
+      
+  
+    .eListmain {
+      flex-grow: 1;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  
+      h1 {
+        font-size: 24px;
+        font-weight: 700;
+        color: #0288d1;
+        margin-bottom: 20px;
+      }
+  
+      .listEmployyes {
+        width: 100%;
+        border-radius: 10px;
+        overflow: hidden;
+  
+        table {
+          width: 100%;
+          border-collapse: collapse;
+          text-align: left;
+        }
+  
+        thead {
+          background-color: #0288d1;
+          color: white;
+        }
+  
+        th, td {
+          padding: 12px;
+          border-bottom: 2px solid #ddd;
+        }
+  
+        tbody tr:nth-child(even) {
+          background-color: #f9f9f9;
+        }
+  
+        tbody tr:hover {
+          background-color: #e4f4f9;
+          transform: scale(1.02);
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+      }
+    }
+  }
+  
+  // ✅ Адаптация для планшетов (ширина до 768px)
+@media (max-width: 768px) {
+  .eListContainer {
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+  }
+
+  .eListNav {
+    width: 100%;
+    margin-bottom: 20px;
+    margin-right: 0;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 10px;
+    border-radius: 5px;
+
+    img {
+      width: 100px;
+      height: 100px;
+    }
+
+    .menunav {
+      flex-direction: row;
+      gap: 10px;
+      margin-top: 0;
+    }
+  }
+
+  .eListmain {
+    width: 100%;
+    padding: 15px;
+
+    h1 {
+      font-size: 22px;
+    }
+
+    .listEmployyes table {
+      font-size: 14px;
+    }
+  }
+}
+
+// ✅ Адаптация для мобильных устройств (ширина до 480px)
+@media (max-width: 480px) {
+  .eListContainer {
+    padding: 10px;
+  }
+
+  .eListNav {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+
+    img {
+      width: 80px;
+      height: 80px;
+    }
+
+    .assignT {
+      padding: 5px 10px;
+      font-size: 12px;
+    }
+
+    .menunav {
+      flex-direction: column;
+      gap: 8px;
+
+      a {
+        font-size: 14px;
+      }
+    }
+  }
+
+  .eListmain {
+    padding: 10px;
+
+    h1 {
+      font-size: 20px;
+    }
+
+    .listEmployyes {
+      overflow-x: auto; // Добавляет горизонтальный скролл при необходимости
+    }
+
+    .listEmployyes table {
+      font-size: 12px;
+
+      th, td {
+        padding: 8px;
+      }
+    }
+  }
+}

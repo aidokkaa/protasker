@@ -1,0 +1,217 @@
+@import '../variables';
+.mainEmployye{
+  width: 75%;
+  margin: 50px auto;
+  display: flex;
+  justify-content: space-around;
+}
+.userImg{
+  img{
+   padding: 5px;
+   border-radius: 50%;
+   border: 5px solid #e4f4f9;
+  }
+}
+.mainUserInfo{
+  display: flex;
+ justify-content: space-between;
+ height: 250px;
+  .userInfo{
+    width: 60%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+ 
+    box-shadow: 3px 3px 3px 3px gray;
+    border-radius: 10px;
+    .info1,.info2,.info3{
+      display: flex;
+      flex-direction: column;
+        gap: 15px;
+        span{
+          font-weight: bold;
+          font-size: 17px;
+        }
+    }
+  }
+  .workSchedule{
+    font-size: 17px;
+    width: 30%;
+    box-shadow: 3px 3px 3px 3px gray;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+  }
+
+ }
+ .calendar {
+  display: flex;
+  flex-direction: row; 
+  justify-content: space-between; 
+  align-items: flex-start;
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 1000px; 
+  margin: 20px auto;
+
+  .react-calendar {
+    width: 65%; 
+    border: none;
+    background: #f8f9fa;
+    border-radius: 12px;
+    padding: 10px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+
+    .react-calendar__tile {
+      padding: 15px;
+      font-size: 16px;
+      border-radius: 6px;
+      transition: background 0.3s ease, transform 0.2s ease;
+
+      &:hover {
+        background: #e0e0e0;
+        transform: scale(1.05);
+      }
+    }
+
+    .react-calendar__tile--active {
+      background: #007bff;
+      color: #fff;
+      font-weight: bold;
+    }
+    .task-day {
+      background: #28a745 !important; 
+      color: white !important;
+      font-weight: bold;
+      border-radius: 6px;
+      box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  .column {
+    width: 30%; 
+    margin-top: 20px;
+    background: #fff;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+
+    h3 {
+      text-align: center;
+      font-size: 18px;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .taskDetail {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #f8f9fa;
+      padding: 10px;
+      margin-top: 8px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s ease;
+
+      &:hover {
+        background: #e9ecef;
+        transform: scale(1.02);
+      }
+
+      p {
+        margin: 0;
+        font-size: 16px;
+        color: #333;
+        font-weight: 500;
+
+        &:first-child {
+          font-weight: bold;
+          color: $primary-color;
+          transition: color 0.3s ease;
+
+          &:hover {
+            color: #0056b3;
+          }
+        }
+      }
+    }
+  }
+}
+.weeklyTasks{
+  margin-top: 30px;
+}
+
+@media (max-width: 768px){
+  .mainEmployye{
+    width: 100% !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin:  30px auto;
+  }
+  .mainUserInfo{
+    display: flex;
+   flex-direction: column;
+   min-height: 500px;
+   margin-top: 20px;
+    .userInfo{
+      width: 99% !important;
+      padding: 4px  !important;
+      display: flex;
+      text-align: center;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center ;
+      box-shadow: 3px 3px 3px 3px gray;
+      border-radius: 10px;
+      .info1,.info2,.info3{
+       width: 100%;
+        display: flex;
+        flex-direction: column;
+          gap: 15px;
+          span{
+            font-weight: bold;
+            font-size: 17px;
+          }
+      }
+    }
+    .workSchedule{
+      font-size: 17px;
+      width: 99% !important;
+      align-items: center;
+      margin-top: 20px;
+      padding: 15px 0 !important;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center ;
+      box-shadow: 3px 3px 3px 3px gray;
+      border-radius: 10px;
+    }
+  
+   }
+   .main{
+    background-color: white;
+   }
+   .weeklyTasks{
+    margin-top: 530px;
+  }
+  .react-calendar{
+    width: 100% !important;
+  }
+  .calendar{
+    width: 100% !important;
+    flex-direction: column;
+  }
+  .column{
+    width: 100% !important;
+    padding: 10px 0 !important;
+  }
+  
+}

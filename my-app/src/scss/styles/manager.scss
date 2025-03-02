@@ -1,0 +1,456 @@
+.navTop {
+  background-color: #0288d1;
+  width: 100%;
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
+  transition: background-color 0.3s ease-in-out;
+
+  &:hover {
+    background-color: #0277bd;
+  }
+  .link{
+    text-decoration: none;
+  }
+  .logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+
+    &:hover {
+      transform: scale(1.05);
+      opacity: 0.9;
+    }
+  }
+
+.light{
+  color: #333;
+}
+  .logout-btn {
+    background-color: white;
+    color: #0288d1;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 8px 16px;
+    border: 2px solid white;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    outline: none;
+
+    &:hover {
+      background-color: #e4f4f9;
+      color: #01579b;
+      border-color: #01579b;
+      transform: scale(1.05);
+    }
+
+    &:active {
+      transform: scale(0.95);
+    }
+  }
+}
+
+.mContainer{
+  width: 85%;
+  margin: 50px auto;
+  display: flex;
+  justify-content: space-between;
+  .navandphoto{
+   width: 25% ;
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+   .userImg{
+     img{
+      padding: 5px;
+      border-radius: 50%;
+      border: 5px solid #e4f4f9;
+     }
+   }
+   .nav{
+    margin-top: 50px;
+    background-color: #e4f4f9;
+    padding: 25px 25px 0 25px;
+    width:85%;
+    height: 672px;
+    border-radius: 15px;
+    h1,h2{
+      text-align: center;
+    }
+    .addTask{
+      margin: 80px auto;
+      text-align: center;
+      font-size: 17px;
+      color: white;
+      font-weight: 500;
+      width: 160px;
+      padding: 5px;
+      border-radius: 20px;
+      background-color: #0288d1;
+      cursor: pointer;
+    }
+    .navMenu{
+      font-size: 17px;
+      font-weight: 500;
+      .link{
+        text-decoration: none;
+        color: black;
+      }
+    }
+   }
+  }
+  .mainManager{
+   width: 80%;
+   .mainUserInfo{
+    display: flex;
+   justify-content: space-between;
+   height: 250px;
+    .userInfo{
+      width: 60%;
+      padding: 20px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+   
+      box-shadow: 3px 3px 3px 3px gray;
+      border-radius: 10px;
+      .info1,.info2,.info3{
+        display: flex;
+        flex-direction: column;
+          gap: 15px;
+          span{
+            font-weight: bold;
+            font-size: 17px;
+          }
+      }
+    }
+    .workSchedule{
+      font-size: 17px;
+      width: 30%;
+      box-shadow: 3px 3px 3px 3px gray;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      padding: 20px;
+    }
+
+   }
+   .mainContainer{
+    display: flex;
+    justify-content: space-between;
+   }
+  }
+}
+// styles for AssignTask
+.assignContainer{
+    width: 90%;
+    margin: 50px auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  .todaysTasks{
+    width: 20%;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 20px;
+    box-shadow: 3px 3px 3px 3px gray;
+  min-height: 650px;
+  .hrDiv{
+    border: 1px dashed gray;
+    width: 100%;
+  }
+  }
+  .usersAndtasks{
+    width: 70%;
+    min-height: 650px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px 5px gray;
+    padding: 10px 50px;
+  }
+  .tasks{
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    box-shadow: 3px 3px 7px 3px #8dbfdb;
+    flex-wrap: wrap;
+    gap: 27px;
+    padding: 20px 10px;
+    overflow: scroll; 
+    width: 70%;
+    min-height: 400px;
+    &::-webkit-scrollbar {
+        display: none;
+      }
+  }
+  .taskCard{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 180px;
+    height: 110px;
+    box-shadow: 5px 5px 5px 5px gray;
+    padding: 24px 10px 10px 10px;
+    border-radius: 15px;
+   
+}
+  .users{
+    width: 20%;
+    min-height: 500px;  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+.userCard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0288d1;
+    border-radius: 15px;
+    width: 170px;
+    height: 60px;
+    margin-top: 50px;
+    padding: 15px;
+    transition: background-color 0.3s ease;
+  }
+
+  .assigned {
+    background-color: green;
+    color: white; 
+    transition: transform 0.3s ease;
+   
+    &:hover{
+        transform: scale(1.1);
+    }
+  }
+  .error {
+    background-color: red; 
+    color: white;  
+    transition: transform 0.3s ease;  
+  }
+
+
+  @media (max-width: 768px) {
+    .mContainer{
+      width: 100%;
+      flex-direction: column ;
+   
+    }
+    .navandphoto{
+      width: 100% !important ;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      .userImg{
+        img{
+         padding: 5px;
+         border-radius: 50%;
+         border: 5px solid #e4f4f9;
+         width: 130px;
+        }
+      }
+      .nav{
+       margin-top: 50px;
+       background-color: #e4f4f9;
+       padding: 25px 25px 0 25px;
+       width:85%;
+       height: 660px;
+       border-radius: 15px;
+       h1,h2{
+         text-align: center;
+       }
+       .addTask{
+         margin: 80px auto;
+         text-align: center;
+         font-size: 15px;
+         color: white;
+         font-weight: 500;
+         width: 140px !important;
+         padding: 2px;
+         border-radius: 20px;
+         background-color: #0288d1;
+         cursor: pointer;
+       }
+       .navMenu{
+         font-size: 17px;
+         font-weight: 500;
+         .link{
+           text-decoration: none;
+           color: black;
+         }
+       }
+      }
+     }
+     .mainManager{
+      width: 100% !important;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin:  30px auto;
+      .mainUserInfo{
+       display: flex;
+      flex-direction: column;
+      min-height: 500px;
+       .userInfo{
+         width: 99% !important;
+         padding: 4px  !important;
+         display: flex;
+         text-align: center;
+         justify-content: center;
+         flex-direction: column;
+         align-items: center ;
+         box-shadow: 3px 3px 3px 3px gray;
+         border-radius: 10px;
+         .info1,.info2,.info3{
+          width: 100%;
+           display: flex;
+           flex-direction: column;
+             gap: 15px;
+             span{
+               font-weight: bold;
+               font-size: 17px;
+             }
+         }
+       }
+       .workSchedule{
+         font-size: 17px;
+         width: 99% !important;
+         align-items: center;
+         padding: 15px 0 !important;
+         display: flex;
+         justify-content: center;
+         flex-direction: column;
+         align-items: center ;
+         box-shadow: 3px 3px 3px 3px gray;
+         border-radius: 10px;
+       }
+   
+      }
+      .mainContainer{
+        width: 100%;
+        margin: 0 auto;
+       display: flex;
+       justify-content: center;
+       flex-direction: column;
+    
+      }
+     }
+     .taskList{
+      width: 70%;
+      margin: 55px auto;
+    }
+    .mainRight{
+      width: 100%;
+      flex-direction: column;
+    }
+    
+  }
+
+// styles for assignedTasks
+@media (max-width: 768px) {
+  .assignContainer {
+    flex-direction: column;
+    align-items: center;
+    width: 95%;
+    padding: 15px;
+  }
+
+  .todaysTasks,
+  .usersAndtasks {
+    width: 100%;
+    min-height: auto;
+    padding: 15px;
+  }
+
+  .usersAndtasks {
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px;
+    margin-top: 50px;
+  }
+
+  .tasks {
+    width: 100%;
+    min-height: auto;
+    padding: 10px;
+    gap: 15px;
+  }
+
+  .users {
+    width: 100%;
+    min-height: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .taskCard {
+    width: 160px;
+    height: 100px;
+  }
+
+  .userCard {
+    width: 140px;
+    height: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .assignContainer {
+    padding: 10px;
+    margin: 20px auto;
+  }
+
+  .todaysTasks {
+    width: 100%;
+    padding: 10px;
+    min-height: auto;
+  }
+
+  .usersAndtasks {
+    flex-direction: column;
+    padding: 10px;
+    margin-top: 30px;
+    gap: 50px;
+  }
+
+  .tasks {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .taskCard {
+    width: 140px;
+    height: 90px;
+    padding: 10px;
+  }
+
+  .users {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+  }
+
+  .userCard {
+    width: 120px;
+    height: 45px;
+    font-size: 14px;
+  }
+}
+
+ 

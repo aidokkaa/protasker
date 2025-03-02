@@ -1,0 +1,244 @@
+.rotate{
+  width: 90%;
+  height: 70vh;
+  margin: 50px auto;
+  padding: 50px 0; 
+  display: flex;
+  margin-top: 60px;
+  align-items: center;
+  justify-content: space-between;
+}
+.rotating-icons-container {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    margin: 0 auto;
+   width: 50%;
+  }
+
+  .center-logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    h1{
+      font-size: 45px;
+      color: #0288d1;
+      width: 230px;
+      height: 150px;
+    }
+  }
+  
+  .center-logo img {
+    width: 300px; 
+    height: 300px;
+    object-fit: contain;
+  }
+  .rotating-circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    height: 300px;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    animation: rotate 10s linear infinite;
+  }
+  
+  .icon {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform-origin: center center; 
+  }
+  .icon img{
+    width: 150px;
+  }
+ 
+  .icon:nth-child(1) {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%) rotate(0deg); 
+  }
+  
+  .icon:nth-child(2) {
+    top: 50%;
+    left: 100%;
+    transform: translateY(-50%) rotate(90deg);
+  }
+  
+  .icon:nth-child(3) {
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) rotate(180deg);
+  }
+  
+  .icon:nth-child(4) {
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%) rotate(270deg);
+  }
+  .rotatetext{
+   width: 50%;
+  }
+  .innerText{
+    font-size: 45px;
+    width: 80%;
+    margin: 20px auto;
+  }
+
+  @keyframes rotate {
+    from {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+    to {
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
+  }
+  @media (max-width: 1024px) {
+    .rotate {
+      width: 100%;
+      height: auto;
+      padding: 20px 0;
+      margin-top: 40px;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    .rotating-icons-container {
+      height: 10px !important;
+    }
+  
+    .center-logo h1 {
+      font-size: 30px;
+      text-align: center;
+    }
+  
+    .center-logo img {
+      display: none;
+    }
+  
+    .rotating-circle {
+      width: 200px;
+      height: 200px;
+      transform: translate(-50%, -50%);
+      animation: none;
+    }
+  
+    .icon {
+      width: 40px;
+      height: 40px;
+      transform: translateX(-50%);
+      display: none;
+    }
+  
+    .rotatetext {
+      width: 90%;
+    }
+  
+    .innerText {
+      font-size: 20px;
+      text-align: center;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .rotate {
+      width: 100%;
+      height: auto;
+      padding: 15px 0;
+      margin-top: 30px;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    .rotating-icons-container {
+      width: 70%;
+      height: 250px;
+    }
+  
+    .center-logo h1 {
+      font-size: 25px;
+    }
+  
+    .center-logo img {
+      display: none;
+    }
+  
+    .rotating-circle {
+      width: 150px;
+      height: 150px;
+      transform: translate(-50%, -50%);
+      animation: none;
+    }
+  
+    .icon {
+      width: 30px;
+      height: 30px;
+      transform: translateX(-50%);
+      display: none;
+    }
+  
+    .rotatetext {
+      width: 90%;
+    }
+  
+    .innerText {
+      font-size: 18px;
+      text-align: center;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .rotate {
+      width: 100%;
+      padding: 10px 0;
+      margin-top: 20px;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    .rotating-icons-container {
+      width: 60%;
+      height: 200px;
+    }
+  
+    .center-logo h1 {
+      font-size: 20px;
+    }
+  
+    .center-logo img {
+      display: none;
+    }
+  
+    .rotating-circle {
+      width: 120px;
+      height: 120px;
+      transform: translate(-50%, -50%);
+      animation: none;
+    }
+  
+    .icon {
+      width: 25px;
+      height: 25px;
+      transform: translateX(-50%);
+      display: none;
+    }
+  
+    .rotatetext {
+      width: 90%;
+    }
+  
+    .innerText {
+      font-size: 16px;
+      text-align: center;
+    }
+  }
+  
