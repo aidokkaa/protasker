@@ -6,7 +6,7 @@ Protasker is a task management platform designed to streamline business operatio
 
 - **Task Management**: Create, assign, and track tasks for employees.
 - **Task Status**: View and update task statuses, such as "New", "In Process", and "Completed".
-- **User Roles**: Manage different user roles such as Manager and Employee.
+- **User Roles**: Manage different user roles such as Manager and Employee.Everyone has their own interface.
 - **Calendar**: Visualize task deadlines and schedules with a built-in calendar.
 - **Notifications**: Receive notifications for task updates.
 - **Task Details**: Add descriptions, deadlines, and progress updates for each task.
