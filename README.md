@@ -1,4 +1,6 @@
 # Protasker - Task Management Platform for Business
+[![Watch the video] Video screen of the manager interface(https://www.youtube.com/watch?v=dFr3WMJ1aDY);
+[![Watch the video] Video screen of the employee interface(https://www.youtube.com/watch?v=hbbgQ7inlAc);
 
 Protasker is a task management platform designed to streamline business operations by providing an easy-to-use system for managing tasks, assigning responsibilities, and tracking progress. It is suitable for various types of businesses including catering, home repairs, and cleaning services.
 
